@@ -2,6 +2,7 @@ package com.lhxia.module_marquee
 
 import android.graphics.Color
 import android.os.Bundle
+import android.text.SpannableStringBuilder
 import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup
@@ -37,6 +38,7 @@ class MarqueeMainActivity : BaseActivity() {
                 }
                 textContentInput = editText{
                     hint = "请输入文本内容"
+                    text = SpannableStringBuilder("ssssssssssssssssssss")
                 }
                 button {
                     onClick {

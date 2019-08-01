@@ -1,6 +1,7 @@
 package com.lhxia.middle_core.app
 
 import android.os.Bundle
+import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import com.alibaba.android.arouter.launcher.ARouter
 import com.lhxia.lib_coroutine.CoroutineSupport
@@ -18,6 +19,7 @@ open class BaseActivity: AppCompatActivity() {
 
     internal val coroutineSupport: CoroutineSupport = CoroutineSupport()
 
+    val handler = lazy { Handler() }
 //    private val presenter: BasePresenter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,5 +29,9 @@ open class BaseActivity: AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         coroutineSupport.destroy()
+    }
+
+    fun getHandler(): Handler{
+        return handler.value
     }
 }
