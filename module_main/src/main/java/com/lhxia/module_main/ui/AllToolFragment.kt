@@ -32,6 +32,7 @@ import org.jetbrains.anko.sdk27.coroutines.onClick
 class AllToolFragment : BaseFragment() {
 
     private val toolRepo: ToolRepo = ToolRepo()
+//    lateinit var toolRecyclerView: RecyclerView
 
 
     override fun onCreateView(
@@ -43,14 +44,12 @@ class AllToolFragment : BaseFragment() {
     }
 
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-
-
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+//        toolRecyclerView = view.findViewById(R.id.toolRecyclerView)
         toolRecyclerView.layoutManager = GridLayoutManager(context, 2, RecyclerView.VERTICAL, false)
         toolRecyclerView.adapter = ToolListAdapter(context!!, toolRepo.getAllTools())
     }
-
 
     companion object {
 

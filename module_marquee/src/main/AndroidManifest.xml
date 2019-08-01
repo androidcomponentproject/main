@@ -3,8 +3,11 @@
           package="com.lhxia.module_marquee">
 
     <application>
-        <activity android:name=".MarqueeMainActivity" android:screenOrientation="landscape">
+        <activity android:name=".MarqueeActivity"
+                  android:screenOrientation="landscape"
+                  android:theme="@style/Theme.AppCompat.NoActionBar">
         </activity>
+        <activity android:name=".MarqueeMainActivity"/>
     </application>
 
 </manifest>

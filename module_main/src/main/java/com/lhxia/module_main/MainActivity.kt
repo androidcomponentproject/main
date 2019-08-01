@@ -50,7 +50,7 @@ class MainActivity : BaseActivity() {
 
         viewPager2.adapter = FragmentListAdapter(this@MainActivity, arrayListOf(
             AllToolFragment.newInstance(),
-            AllToolFragment.newInstance(),
+            service<GoalService>().getGoalListFragment(),
             AllToolFragment.newInstance(),
             AllToolFragment.newInstance()))
         TabLayoutMediator(tabLayout, viewPager2) { tab, position ->
