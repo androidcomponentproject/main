@@ -6,6 +6,7 @@ apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'kotlin-kapt'
 apply plugin: 'com.alibaba.arouter'
+apply from: rootProject.file('./config/gradle/dep.gradle')
 android {
     compileSdkVersion 28
     defaultConfig {

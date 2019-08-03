@@ -1,25 +1,26 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+
 buildscript {
-    ext.kotlin_version = '1.3.40'
-    ext.anko_version='0.10.8'
+    apply from: rootProject.file('./config/gradle/dep.gradle')
+
     repositories {
-        maven { url 'http://51hotmm.com:7071/repository/maven-releases/'}
+        maven { url maven_url}
         google()
         jcenter()
         
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.1'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath classpath.gradle
+        classpath classpath.kotlin
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
-        classpath "com.alibaba:arouter-register:1.0.2"
+        classpath classpath.arouter_auto_register
     }
 }
 
 allprojects {
     repositories {
-        maven { url 'http://51hotmm.com:7071/repository/maven-releases/'}
+        maven { url maven_url}
         google()
         jcenter()
         
