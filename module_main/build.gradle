@@ -55,8 +55,15 @@ dependencies {
     kapt 'com.alibaba:arouter-compiler:1.2.2'
 
     implementation project(path: ':middle_core')
+
+    implementation project(path: ':module_goal')
+    implementation project(path: ':module_login')
+    implementation project(path: ':module_lighting')
+    implementation project(path: ':module_marquee')
+
     implementation project(path: ':service_main')
     implementation project(path: ':service_goal')
     implementation project(path: ':service_login')
     implementation project(path: ':service_marquee')
+    implementation project(path: ':service_lighting')
 }

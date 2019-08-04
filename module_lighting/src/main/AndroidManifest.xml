@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.lhxia.module_lighting">
+
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+
+    <application>
+        <activity android:name=".LightingMainActivity">
+        </activity>
+    </application>
+
+</manifest>

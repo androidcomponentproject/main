@@ -17,6 +17,7 @@ import com.lhxia.middle_core.ktx.launch
 import com.lhxia.middle_core.ktx.service
 import com.lhxia.module_main.ui.AllToolFragment
 import com.lhxia.service_goal.GoalService
+import com.lhxia.service_lighting.LightingService
 import com.lhxia.service_login.LoginService
 import kotlinx.android.synthetic.main.main_activity_main.*
 import kotlinx.coroutines.*

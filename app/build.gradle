@@ -53,9 +53,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation project(path: ':middle_core')
     implementation project(path: ':module_main')
-    implementation project(path: ':module_goal')
-    implementation project(path: ':module_login')
-    implementation project(path: ':module_marquee')
 
     api 'com.alibaba:arouter-api:1.5.0'
     kapt 'com.alibaba:arouter-compiler:1.2.2'

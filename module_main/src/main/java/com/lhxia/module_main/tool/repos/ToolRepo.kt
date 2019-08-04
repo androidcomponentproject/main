@@ -13,7 +13,7 @@ class ToolRepo {
 
         return arrayListOf(
             Tool("marquee", "常用工具", "屏幕跑马灯", "marquee"),
-            Tool("marquee", "常用工具", "屏幕跑马灯", "marquee"),
+            Tool("lighting", "常用工具", "手电筒", "lighting"),
             Tool("marquee", "常用工具", "屏幕跑马灯", "marquee")
         )
     }
