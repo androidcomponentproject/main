@@ -1,1 +1,1 @@
-include ':app', ':middle_core', ':lib_coroutine', ':module_main', ':module_goal', ':service_goal', ':module_login', ':service_login', ':service_main', ':module_marquee', ':service_marquee', ':lib_permission', ':lib_network'
+include ':app', ':middle_core', ':module_main', ':module_goal', ':service_goal', ':module_login', ':service_login', ':service_main', ':module_marquee', ':service_marquee', ':lib_permission', ':lib_network'
