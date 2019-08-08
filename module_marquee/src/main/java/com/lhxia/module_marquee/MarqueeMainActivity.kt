@@ -40,9 +40,10 @@ class MarqueeMainActivity : BaseActivity() {
                     hint = "请输入文本内容"
                     text = SpannableStringBuilder("ssssssssssssssssssss")
                 }
-                button {
+                button("开始跑马灯") {
                     onClick {
                         MarqueeActivity.startActivity(this@MarqueeMainActivity, textContentInput.text, Color.BLUE, textSizeInput.text.toString().toFloatOrNull())
+                        toast("点击屏幕结束跑马灯")
                     }
                 }
             }
