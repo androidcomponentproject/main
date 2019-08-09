@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.NumberPicker
 import android.widget.TextView
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.lhxia.middle_core.app.BaseActivity
@@ -20,7 +21,7 @@ import org.jetbrains.anko.sdk27.coroutines.onTouch
 @Route(path = "/marquee/main", name = "目标列表fragment")
 class MarqueeMainActivity : BaseActivity() {
 
-    private lateinit var textSizeInput: EditText
+    private lateinit var textSizeInput: Button
     private lateinit var textColorInput: EditText
     private lateinit var textContentInput: EditText
 
@@ -30,8 +31,10 @@ class MarqueeMainActivity : BaseActivity() {
 
         frameLayout {
             verticalLayout {
-                textSizeInput = editText{
-                    hint = "请输入文本大小"
+                textSizeInput = button("14"){
+                    onClick {
+
+                    }
                 }
                 textColorInput = editText{
                     hint = "请输入文本颜色"
