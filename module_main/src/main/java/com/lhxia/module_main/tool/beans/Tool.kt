@@ -3,6 +3,7 @@ package com.lhxia.module_main.tool.beans
 import android.content.Context
 import com.alibaba.android.arouter.facade.template.IProvider
 import com.lhxia.middle_core.ktx.service
+import com.lhxia.service_goal.GoalService
 import com.lhxia.service_lighting.LightingService
 import com.lhxia.service_marquee.MarqueeService
 
@@ -28,6 +29,7 @@ fun Tool.startToolMainUI(context: Context){
     return when(module){
         "marquee" -> service<MarqueeService>().startMain(context)
         "lighting" -> service<LightingService>().startMain(context)
+        "goal" -> service<GoalService>().startMain(context)
         else -> {}
     }
 }

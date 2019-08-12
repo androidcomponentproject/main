@@ -1,5 +1,6 @@
 package com.lhxia.service_goal
 
+import android.content.Context
 import com.alibaba.android.arouter.facade.template.IProvider
 import com.lhxia.middle_core.app.BaseFragment
 
@@ -11,4 +12,6 @@ import com.lhxia.middle_core.app.BaseFragment
 interface GoalService: IProvider {
 
     fun getGoalListFragment(): BaseFragment
+
+    fun startMain(context: Context)
 }

@@ -13,6 +13,9 @@ import com.lhxia.service_goal.GoalService
  */
 @Route(path = "/goal/service", name = "目标模块服务")
 class GoalServiceImpl: GoalService {
+    override fun startMain(context: Context) {
+        ARouter.getInstance().build("/goal/main").navigation(context)
+    }
 
     override fun getGoalListFragment(): BaseFragment {
         return (ARouter.getInstance().build("/goal/goalList").navigation() as BaseFragment?)!!

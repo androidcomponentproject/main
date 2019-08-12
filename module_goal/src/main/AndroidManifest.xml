@@ -1,2 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.lhxia.module_goal"/>
+          package="com.lhxia.module_goal">
+
+    <application>
+        <activity android:name=".MainGoalActivity">
+        </activity>
+    </application>
+
+</manifest>
