@@ -3,7 +3,7 @@
           package="com.lhxia.module_goal">
 
     <application>
-        <activity android:name=".MainGoalActivity">
+        <activity android:theme="@style/AppTheme" android:name=".MainGoalActivity">
         </activity>
     </application>
 

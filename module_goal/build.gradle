@@ -48,13 +48,17 @@ dependencies {
     implementation dep.core_ktx
     implementation dep.constraintlayout
     implementation dep.recyclerview
+    implementation dep.material
+    implementation dep.anko_design
+    implementation dep.anko_design_coroutines
     testImplementation dep.junit
     androidTestImplementation dep.test_runner
     androidTestImplementation dep.espresso_core
 
-    api dep.arouter
-    kapt dep.arouter_compiler
+    api 'com.alibaba:arouter-api:1.5.0'
+    kapt 'com.alibaba:arouter-compiler:1.2.2'
 
     implementation project(path: ':middle_core')
     implementation project(path: ':service_goal')
+    implementation project(path: ':lib_ui')
 }

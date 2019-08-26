@@ -1,17 +1,27 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
 
+apply from: rootProject.file('./config/gradle/dep.gradle')
+apply from: rootProject.file("./config/gradle/upload_maven.gradle")
 android {
-    compileSdkVersion 28
+    compileSdkVersion config.compileSdkVersion
 
 
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 28
+        minSdkVersion config.minSdkVersion
+        targetSdkVersion config.targetSdkVersion
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner config.testInstrumentationRunner
 
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [ moduleName : project.getName() ]
+            }
+        }
     }
 
     buildTypes {
@@ -21,13 +31,27 @@ android {
         }
     }
 
+    kapt {
+        arguments {
+            arg("AROUTER_MODULE_NAME", project.getName())
+        }
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation dep.kotlin_stdlib_jdk7
+    implementation dep.anko
+    implementation dep.appcompat
+    implementation dep.core_ktx
+    implementation dep.constraintlayout
+    testImplementation dep.junit
+    androidTestImplementation dep.test_runner
+    androidTestImplementation dep.espresso_core
 
-    implementation 'androidx.appcompat:appcompat:1.0.2'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.2.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    api dep.arouter
+    kapt dep.arouter_compiler
+
+    api dep.anko_cardview
+    api dep.anko_recyclerview
 }

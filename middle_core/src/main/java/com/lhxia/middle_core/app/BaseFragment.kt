@@ -15,6 +15,7 @@ open class BaseFragment(parent: Job? = null): Fragment() {
 
     internal val coroutineSupport: CoroutineSupport = CoroutineSupport(parent)
 
+    fun coroutine(): CoroutineScope = coroutineSupport
 
     fun launch(
         context: CoroutineContext = EmptyCoroutineContext,

@@ -66,4 +66,6 @@ dependencies {
     implementation project(path: ':service_login')
     implementation project(path: ':service_marquee')
     implementation project(path: ':service_lighting')
+
+    implementation project(path: ':lib_ui')
 }
